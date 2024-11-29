@@ -116,3 +116,42 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+#inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+#inscription form {
+    width: 50%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+#inscription .form-control,
+#inscription select.form-select {
+    background: #fff;
+    border: 1px solid #4CC9F0;
+    border-radius: 50px;
+    color: #333;
+    height: 40px;
+    font-size: 0.9rem;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+#inscription .btn {
+    background: linear-gradient(to right, #B5179E, #4CC9F0);
+    color: #fff;
+    border: none;
+    font-size: 0.8rem;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+
