@@ -36,7 +36,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoriesDropdown">
                                 <li><a class="dropdown-item" href="concerts.html">Concerts</a></li>
-                                <li><a class="dropdown-item" href="conferences">Conférences</a></li>
+                                <li><a class="dropdown-item" href="conferences.html">Conférences</a></li>
                                 <li><a class="dropdown-item" href="expositions.html">Expositions</a></li>
                                 <li><a class="dropdown-item" href="ateliers.html">Ateliers</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -44,10 +44,67 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                        <li class="nav-item">
+                            <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#createEventModal">
+                                <strong>+</strong> Créer un événement
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createEventModalLabel">Créer un nouvel événement</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="createEventForm">
+                            
+                            <div class="mb-3">
+                                <label for="eventName" class="form-label">Nom de l'événement</label>
+                                <input type="text" class="form-control" id="eventName" placeholder="Nom de l'événement" required>
+                            </div>
+        
+                           
+                            <div class="mb-3">
+                                <label for="eventDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="eventDescription" rows="4" placeholder="Description de l'événement" required></textarea>
+                            </div>
+        
+                           
+                            <div class="mb-3">
+                                <label for="eventDate" class="form-label">Date de l'événement</label>
+                                <input type="date" class="form-control" id="eventDate" required>
+                            </div>
+        
+                            
+                            <div class="mb-3">
+                                <label for="eventTime" class="form-label">Heure de l'événement</label>
+                                <input type="time" class="form-control" id="eventTime" required>
+                            </div>
+        
+                           
+                            <div class="mb-3">
+                                <label for="eventPlace" class="form-label">Lieu de l'événement</label>
+                                <input type="text" class="form-control" id="eventPlace" placeholder="Lieu de l'événement" required>
+                            </div>
+        
+                          
+                            <div class="mb-3">
+                                <label for="eventImage" class="form-label">Image de l'événement</label>
+                                <input type="file" class="form-control" id="eventImage" required>
+                            </div>
+        
+                           
+                            <button type="submit" class="btn btn-primary">Ajouter l'événement</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
             <div class="carousel-indicators">
