@@ -56,3 +56,34 @@ var eventModal = document.getElementById('eventModal');
             document.getElementById('event').value = eventType;
             document.getElementById('eventDate').value = date;
         });
+
+let liked = false;
+let disliked = false;
+
+document.getElementById("like-btn").addEventListener("click", function() {
+    liked = true;
+    disliked = false;
+    document.getElementById("like-btn").classList.add("btn-outline-success");
+    document.getElementById("dislike-btn").classList.remove("btn-outline-danger");
+});
+
+document.getElementById("dislike-btn").addEventListener("click", function() {
+    disliked = true;
+    liked = false;
+    document.getElementById("dislike-btn").classList.add("btn-outline-danger");
+    document.getElementById("like-btn").classList.remove("btn-outline-success");
+});
+
+
+document.getElementById("submit-comment").addEventListener("click", function() {
+    let commentText = document.getElementById("comment-input").value;
+    if (commentText.trim() !== "") {
+      
+        alert("Comment Submitted: " + commentText);
+        document.getElementById("comment-input").value = ""; 
+        let modal = bootstrap.Modal.getInstance(document.getElementById("postModal"));
+        modal.hide();
+    } else {
+        alert("Please enter a comment.");
+    }
+});

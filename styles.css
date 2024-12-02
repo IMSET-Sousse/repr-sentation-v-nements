@@ -220,14 +220,14 @@ footer {
     font-size: 0.9rem;
     color: #6c757d;
 }
-/* Style for the modal background */
+
 #createEventModal .modal-content {
-    background-color: #f7ecf5; /* Soft pinkish background */
+    background-color: #f7ecf5; 
     border-radius: 10px;
     border: 1px solid #61094b;
 }
 
-/* Modal header with gradient background */
+
 #createEventModal .modal-header {
     background: linear-gradient(to right, #61094b, #f0e1e9);
     color: white;
@@ -235,7 +235,7 @@ footer {
     border-top-right-radius: 10px;
 }
 
-/* Modal footer background */
+
 #createEventModal .modal-footer {
     background-color: #f8f9fa;
     border-bottom-left-radius: 10px;
