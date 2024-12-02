@@ -69,10 +69,50 @@
                     <p><strong>Lieu:</strong> <span id="eventModalPlace">Event place</span></p>
                     <p><strong>Heure:</strong> <span id="eventModalTime">Event time</span></p>
                     <p><strong>Date:</strong> <span id="eventModalDate">Event date</span></p>
-                    <button class="btn btn-success">Réserver</button>
+                    
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#reservationModal" 
+                        data-name="Concert Live" data-event="Concert Live" data-date="2024-12-10" 
+                        data-description="Rejoignez-nous pour une soirée de musique inoubliable." 
+                        data-place="Paris" data-time="20:00">Réserver</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 50%; background-color: #f8f9fa;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Réservation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservationForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nom Complet</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="event" class="form-label">Événement</label>
+                            <input type="text" class="form-control" id="event" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDate" class="form-label">Date de l'Événement</label>
+                            <input type="date" class="form-control" id="eventDate" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="creditCard" class="form-label">Numéro de Carte de Crédit</label>
+                            <input type="number" class="form-control" id="creditCard" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                                <input type="number" class="form-control" id="cvv" pattern="\d{3,4}" maxlength="4" required>
+                                <small class="form-text text-muted">Entrez les 3 ou 4 chiffres au dos de votre carte.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirmer la Réservation</button>
+                    </form>
                 </div>
             </div>
         </div>

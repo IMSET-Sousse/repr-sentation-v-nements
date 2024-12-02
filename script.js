@@ -22,7 +22,7 @@ carousel.addEventListener('mousemove', function () {
 });
 var eventModal = document.getElementById('eventModal');
         eventModal.addEventListener('show.bs.modal', function (event) {
-            var button = event.relatedTarget; // Button that triggered the modal
+            var button = event.relatedTarget; 
             var eventName = button.getAttribute('data-event-name');
             var eventImage = button.getAttribute('data-image');
             var eventDescription = button.getAttribute('data-description');
@@ -30,7 +30,7 @@ var eventModal = document.getElementById('eventModal');
             var eventTime = button.getAttribute('data-time');
             var eventDate = button.getAttribute('data-date');
 
-            // Update the modal's content
+            
             var modalTitle = eventModal.querySelector('.modal-title');
             var modalImage = eventModal.querySelector('#eventModalImage');
             var modalDescription = eventModal.querySelector('#eventModalDescription');
@@ -44,4 +44,15 @@ var eventModal = document.getElementById('eventModal');
             modalPlace.textContent = eventPlace;
             modalTime.textContent = eventTime;
             modalDate.textContent = eventDate;
+        });
+        const reservationModal = document.getElementById('reservationModal');
+        reservationModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const name = button.getAttribute('data-name');
+            const date = button.getAttribute('data-date');
+            const eventType = button.getAttribute('data-event');
+        
+          
+            document.getElementById('event').value = eventType;
+            document.getElementById('eventDate').value = date;
         });

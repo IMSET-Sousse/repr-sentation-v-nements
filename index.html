@@ -1,180 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Représentation des Événements</title>
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site de Représentation des Événements</title>
     
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-   
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">AS EVENTS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">AS EVENTS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#events">Acceuil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Catégories
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoriesDropdown">
+                                <li><a class="dropdown-item" href="concerts.html">Concerts</a></li>
+                                <li><a class="dropdown-item" href="conferences">Conférences</a></li>
+                                <li><a class="dropdown-item" href="expositions.html">Expositions</a></li>
+                                <li><a class="dropdown-item" href="ateliers.html">Ateliers</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="allevents.html">Tous les événements</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert1.jfif" class="d-block w-100" alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: white;">Découvrez nos événements exclusifs</h5>
+                        <p>Rejoignez-nous pour une expérience inoubliable.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\exposition2.jfif" class="d-block w-100" alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: white;">Participez à des conférences inspirantes</h5>
+                        <p>Des experts de renom à votre portée.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence1.jfif" class="d-block w-100" alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: white;">Explorez des expositions d'art uniques</h5>
+                        <p>Une expérience culturelle enrichissante.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#events">Acceuil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Catégories
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoriesDropdown">
-                            <li><a class="dropdown-item" href="concerts.html">Concerts</a></li>
-                            <li><a class="dropdown-item" href="conferences">Conférences</a></li>
-                            <li><a class="dropdown-item" href="expositions.html">Expositions</a></li>
-                            <li><a class="dropdown-item" href="ateliers.html">Ateliers</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="allevents.html">Tous les événements</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
-                </ul>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </nav>
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert1.jfif" class="d-block w-100" alt="First Slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: white;">Découvrez nos événements exclusifs</h5>
-                    <p>Rejoignez-nous pour une expérience inoubliable.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\exposition2.jfif" class="d-block w-100" alt="Second Slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: white;">Participez à des conférences inspirantes</h5>
-                    <p>Des experts de renom à votre portée.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence1.jfif" class="d-block w-100" alt="Third Slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: white;">Explorez des expositions d'art uniques</h5>
-                    <p>Une expérience culturelle enrichissante.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    
-    <section id="events" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Événements à venir</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert2.jfif" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Concert Live</h5>
-                            <p class="card-text">Rejoignez-nous pour une soirée de musique inoubliable.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Concert Live" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert2.jfif" data-description="Rejoignez-nous pour une soirée de musique inoubliable." data-place="Paris" data-time="20:00" data-date="2024-12-10">Détails</button>
+        
+        <section id="events" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Événements à venir</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert2.jfif" class="card-img-top" alt="Event 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Concert Live</h5>
+                                <p class="card-text">Rejoignez-nous pour une soirée de musique inoubliable.</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Concert Live" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\concert2.jfif" data-description="Rejoignez-nous pour une soirée de musique inoubliable." data-place="Paris" data-time="20:00" data-date="2024-12-10">Détails</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence2.jfif" class="card-img-top" alt="Event 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Conférence</h5>
-                            <p class="card-text">Participez à une conférence inspirante avec des experts renommés.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Conférence" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence2.jfif" data-description="Participez à une conférence inspirante avec des experts renommés." data-place="Lyon" data-time="15:00" data-date="2024-12-12">Détails</button>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence2.jfif" class="card-img-top" alt="Event 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Conférence</h5>
+                                <p class="card-text">Participez à une conférence inspirante avec des experts renommés.</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Conférence" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\conférence2.jfif" data-description="Participez à une conférence inspirante avec des experts renommés." data-place="Lyon" data-time="15:00" data-date="2024-12-12">Détails</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\atelier2.jfif" class="card-img-top" alt="Event 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Atelier</h5>
-                            <p class="card-text">Participez à un Atelier inspirant.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Atelier" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\atelier2.jfif" data-description="Participez à un Atelier inspirant." data-place="Marseille" data-time="09:00" data-date="2024-12-14">Détails</button>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\atelier2.jfif" class="card-img-top" alt="Event 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Atelier</h5>
+                                <p class="card-text">Participez à un Atelier inspirant.</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal" data-name="Atelier" data-image="C:\Users\Lenovo\Desktop\repr-sentation-v-nements\images\atelier2.jfif" data-description="Participez à un Atelier inspirant." data-place="Marseille" data-time="09:00" data-date="2024-12-14">Détails</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-   
-    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="eventModalLabel">Event Title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p id="eventDescription"><strong> description goes here:</strong></p>
-                    <p><strong>Lieu:</strong> <span id="eventPlace"></span></p>
-                    <p><strong>Date:</strong> <span id="eventDate"></span></p>
-                    <p><strong>Heure:</strong> <span id="eventTime"></span></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-        </div>
-    </div>
     
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">À propos de nous</h2>
-            <p class="text-center">Nous sommes une plateforme dédiée à la promotion et à la gestion d'événements.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="row">
-            <h2 class="text-center mb-6">Contactez-nous</h2>
-            <form>
-                <div class="mb-4">
-                    <label for="name" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="name" required>
+        <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eventModalLabel">Event Title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="eventDescription"><strong> description goes here:</strong></p>
+                        <p><strong>Lieu:</strong> <span id="eventPlace"></span></p>
+                        <p><strong>Date:</strong> <span id="eventDate"></span></p>
+                        <p><strong>Heure:</strong> <span id="eventTime"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#reservationModal" 
+                            data-name="Concert Live" data-event="Concert Live" data-date="2024-12-10" 
+                            data-description="Rejoignez-nous pour une soirée de musique inoubliable." 
+                            data-place="Paris" data-time="20:00">Réserver</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
             </div>
         </div>
-    </section>
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 50%; background-color: #f8f9fa;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reservationModalLabel">Réservation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="reservationForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nom Complet</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="event" class="form-label">Événement</label>
+                                <input type="text" class="form-control" id="event" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDate" class="form-label">Date de l'Événement</label>
+                                <input type="date" class="form-control" id="eventDate" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="creditCard" class="form-label">Numéro de Carte de Crédit</label>
+                                <input type="number" class="form-control" id="creditCard" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="number" class="form-control" id="cvv" pattern="\d{3,4}" maxlength="4" required>
+                                <small class="form-text text-muted">Entrez les 3 ou 4 chiffres au dos de votre carte.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Confirmer la Réservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Événements. Tous droits réservés.</p>
-    </footer>
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">À propos de nous</h2>
+                <p class="text-center">Nous sommes une plateforme dédiée à la promotion et à la gestion d'événements.</p>
+            </div>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-         
-</body>
-</html>
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row">
+                <h2 class="text-center mb-6">Contactez-nous</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Événements. Tous droits réservés.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+            
+    </body>
+    </html>

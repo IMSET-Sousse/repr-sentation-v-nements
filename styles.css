@@ -153,5 +153,19 @@ footer {
     transition: background 0.3s ease-in-out;
     margin-top: 20px;
 }
+#reservationModal .modal-dialog {
+    max-width: 50%;  
+}
 
+#reservationModal .modal-body {
+    padding: 30px;
+}
+
+#reservationModal .form-control {
+    margin-bottom: 15px;
+}
+
+#reservationModal button[type="submit"] {
+    width: 100%;
+}
 
